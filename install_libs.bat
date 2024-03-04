@@ -1,0 +1,1 @@
+cd %cd % && cd .. && pip install virtualenvwrapper-win && mkvirtualenv irs_workspace && workon irs_workspace && pip install django==4.1.4 && cmd /k

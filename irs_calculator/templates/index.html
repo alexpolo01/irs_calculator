@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/vendor/twbs/bootstrap/dist/css/bootstrap.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/vendor/components/font-awesome/css/fontawesome-all.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/bower_components/DataTables/datatables.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/bower_components/datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'irs_calculator/bower_components/DataTables/Select-1.2.6/css/select.dataTables.min.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'irs_calculator/favicon.ico' %}"
+    />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <form>
+            <div class="form-group">
+              <label>Annual Income</label>
+              <input type="text" class="form-control" id="annual_income" />
+            </div>
+            <div class="form-group">
+              <label>Filing Status</label>
+              <select class="form-control" id="filing_status">
+                <option value="1">Single or Married Filing Separately</option>
+                <option value="2">Head of Household</option>
+                <option value="3">Married Filing Jointly</option>
+                <option value="4">
+                  Single or Head of Household (65 and over)
+                </option>
+                <option value="5">
+                  for married taxpaters or Qualifying Surviving Spouse
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Adjustments</label>
+              <input type="text" class="form-control" id="adjusments" />
+            </div>
+            <div class="form-group">
+              <label>Federal Tax Witheld</label>
+              <input
+                type="text"
+                class="form-control"
+                id="federal_tax_witheld"
+              />
+            </div>
+            <button type="button" class="submit btn btn-primary">Submit</button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'irs_calculator/bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/DataTables/datatables.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/datatables.net-rowgroup/js/dataTables.rowGroup.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/datatables.net-rowgroup-bs4/js/rowGroup.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/sweetalert2/dist/sweetalert2.all.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/bower_components/jquery-ui-1.12.1.custom/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/vendor/twbs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'irs_calculator/vendor/popper.js' %}"></script>
+    <script src="{% static 'irs_calculator/js/index.js' %}"></script>
+  </body>
+</html>
